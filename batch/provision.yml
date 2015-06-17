@@ -48,9 +48,9 @@
         visible_to_all_users: yes
         job_flow_role: "{{ role }}"
         ami_version: "{{ ami_version }}"
-        instance_groups: $instance_groups
-        bootstrap_actions: $bootstrap_actions
-        steps: $steps
+        instance_groups: "{{ instance_groups }}"
+        bootstrap_actions: "{{ bootstrap_actions }}"
+        steps: "{{ steps }}"
       register: jobflow
 
     - name: add master to group
